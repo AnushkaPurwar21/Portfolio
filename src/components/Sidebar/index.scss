@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "GTAmerica";
+    src: url('../../assets/fonts/GTAmerica.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CeraBold';
+    src: url('../../assets/fonts/CeraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CeraMedium';
+    src: url('../../assets/fonts/CeraMedium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CeraRegular';
+    src: url('../../assets/fonts/CeraRegular.otf') format('opentype');
+}
+
+.nav-bar {
+    background-color: #001C40;
+    width: 60px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    font-family: 'CeraMedium';
+    min-height: 500px;
+}
+.logo{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+}
+
+nav {
+    display: block;
+    text-align: center;
+    position: absolute;
+    height: 210px;
+    top: 50%;
+    margin-top: -120px;
+    width: 100%;
+
+    a {
+        font-size: 22px;
+        color: #ffffff;
+        display: block;
+        line-height: 51px;
+        position: relative;
+        text-decoration: none;
+    }
+
+    a:first-child {
+        a:after {
+            content: 'HOME';
+        }
+    }
+
+    a.active {
+        svg {
+            color: #74C0FC;
+        }
+    }
+
+    .active {
+        color: #74C0FC;
+    }
+
+    i {
+        transition: all 0.3s ease-out;
+    }
+
+    // &:first-child{
+    //     &::after{
+    //         content: 'HOME';
+    //     }
+    // }
+}
+
+.work-link.active {
+    path {
+        color: #74C0FC;
+    }
+
+}
+
+.close-icon {
+    path {
+        display: none;
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width:1200px) {
+    .nav-bar {
+        background-color: transparent;
+        position: initial;
+        height: auto;
+        min-height: auto;
+
+        ul,
+        nav {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            height: 100%;
+            background-color: #001C40;
+            top: 0;
+            left: 0;
+            position: fixed;
+            z-index: 7;
+            margin: 0;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 40px;
+                margin-top: 30px;
+                font-size: 30px;
+            }
+
+            a:after {
+                opacity: 1;
+                position: initial;
+                width: auto;
+            }
+
+            a svg {
+                opacity: 1 !important;
+            }
+
+            &.mobile-show {
+                display: block;
+            }
+        }
+
+        .close-icon {
+            path {
+                display: block;
+                color: #B4B7C1;
+            }
+
+            font-size: 50px;
+            color: #B4B7C1;
+            margin-top: 100px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 1px solid white;
+        }
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+    }
+}

@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'CeraBold';
+    src: url('../../assets/fonts/CeraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CeraMedium';
+    src: url('../../assets/fonts/CeraMedium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CeraRegular';
+    src: url('../../assets/fonts/CeraRegular.otf') format('opentype');
+}
+
+.about {
+    color: #001C40;
+    margin-left: 15rem;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.about>.about-head {
+    width: 500px;
+    font-family: 'CeraBold';
+    color: #001C40;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        font-size: 50px;
+        color: #B197FC;
+    }
+}
+
+.about>.content {
+    margin-top: 6rem;
+    width: 130rem;
+    color: #183153;
+    font-size: 15px;
+    text-align: justify;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: space-between;
+}
+
+.m-content {
+    margin-top: 35px;
+    display: flex;
+    margin-left: -100px;
+    height: 100%;
+    width: 100%;
+    padding-left: 140px;
+    flex-direction: column;
+    background-color: #FFF5F7;
+}
+
+.m-content>.c-left {
+    display: flex;
+    flex: 1;
+    background-color: #FFF5F7;
+    flex-direction: column;
+    font-family: 'CeraBold';
+    height: 100%;
+}
+
+.m-content>.c-right {
+    display: flex;
+    flex: 1;
+    margin-top: 80px;
+    font-family: 'CeraBold';
+    flex-direction: column;
+}
+
+.c-left>p:nth-of-type(2) {
+    margin-top: -20px;
+    font-size: 20px;
+    font-family: 'CeraMedium';
+    line-height: 32px;
+    word-wrap: break-word;
+}
+
+.c-left>.exp-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.c-left>.exp-flex>.nav-exp-left {
+    flex: 1;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        font-size: 20px;
+        margin: 0;
+        height: 280px;
+        border-left: 6px solid black;
+        position: absolute;
+        text-align: left;
+        z-index: 3;
+
+        li {
+            height: 40px;
+            width: 170px;
+            display: block;
+            list-style: none;
+            padding: 8px 16px;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            font-family: 'CeraBold';
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #183153;
+            text-align: left;
+            z-index: 1;
+            padding-top: 15px;
+            padding-left: 30px;
+            padding-bottom: 0;
+            margin-left: 0px;
+        }
+
+        li:hover {
+            width: 170px;
+            background-color: #63e6be;
+            opacity: 0.9;
+            color: #183153;
+            z-index: 1;
+            padding-top: 15px;
+            padding-left: 30px;
+            padding-bottom: 0;
+            border-left: 6px solid #183153;
+            
+        }
+    }
+}
+
+
+.c-right>.row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 120rem;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #FFF5F7;
+    font-family: 'CeraBold';
+    animation: slideInUp; 
+    animation-duration: 2s; 
+}
+
+
+.c-right>p:nth-of-type(2) {
+    margin-top: -20px;
+    font-size: 20px;
+    word-wrap: break-word;
+    width: 550px;
+    font-family: 'CeraMedium';
+    line-height: 32px;
+}
+
+@media screen and (max-width: 1200px) {
+    .about{
+        position: initial;
+        width: auto;
+        margin: 0;
+        .about-head{
+            margin-top: 50px;
+            margin-left: 4rem;
+            font-size: 28px;
+            margin-right: 4rem;
+            span {
+                font-size: 38px;
+            }
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+        }
+        .m-content{
+            position: initial;
+            width: auto;
+            height: auto;
+            .c-left{
+                width: 400px;
+                .exp-flex{
+                    flex-direction: column;
+                    .nav-exp-left{
+                        flex: 1;
+                        ul{
+                            position: initial;
+                            padding: 0;
+                            margin: 0;
+                            border-left: 0;
+                            border-top: 6px solid black;
+                            width: 200px;
+                            height: 230px;
+                            li{
+                                display: block;
+                                padding: 8px;
+                                margin-bottom: 0;
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                    // .nav-exp-right{
+                    //     flex: 1;
+                    //     display: flex;
+                    //     flex-direction: column;
+                    //     .exp-title{
+                    //         font-size: 20px;
+                    //         .exp-icon {
+                    //             margin-top: 2px;
+                    //             margin-left: 10px;
+                    //         }
+                    //     }
+                    //     .duration {
+                    //         font-size: 15px;
+                    //     }
+                    //     .exp-content {
+                    //         ul{
+                    //             font-size: 15px;
+                    //             li{
+                    //                 font-size: 18px;
+                    //             }
+                    //         }
+                    //         ul li::marker {
+                    //             content: "▶";
+                    //         }
+                            
+                    //     }
+                    // }
+                }
+            }
+            .c-left>p:nth-of-type(1){
+                font-size: 30px;
+            }
+            .c-left>p:nth-of-type(2){
+                display: flex;
+                width: 350px;
+                font-size: 20px;
+                flex-wrap: wrap;
+            }
+        }
+        .c-right{
+            p:nth-of-type(1){
+                font-size:30px;
+            }
+            p:nth-of-type(2){
+                font-size:20px;
+                width: 340px;
+            }
+            .row{
+                width: 340px;
+            }
+        }
+    }
+}

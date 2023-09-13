@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'CeraBold';
+    src: url('../../../assets/fonts/CeraBlack.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CeraMedium';
+    src: url('../../../assets/fonts/CeraMedium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CeraRegular';
+    src: url('../../../assets/fonts/CeraRegular.otf') format('opentype');
+}
+.nav-exp-right {
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    font-family: 'CeraBold';
+    background-color: #FFF5F7;
+
+    .exp-title {
+        display: flex;
+        font-size: 20px;
+        margin-top: 5px;
+        font-family: 'CeraMedium';
+        .desig{
+            font-size: 20px;
+            color: #001C40;
+            font-family: 'CeraBold';
+        }
+        
+        .company{
+            color: #b197fc;
+            font-family: 'CeraBold';
+            font-size: 20px;
+        }
+        .exp-icon {
+            margin-top: 4px;
+            margin-left: 10px;
+        }
+    }
+
+    .duration {
+        font-size: 15px;
+        font-family: 'CeraMedium';
+        margin-top: 10px;
+    }
+
+    .exp-content {
+        width: 650px;
+        ul {
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+            font-family: 'CeraRegular';
+            margin-top: 30px;
+            margin-left: 10px;
+            list-style-type: none;
+        }
+
+        li {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-left: 1.5rem;
+        }
+
+        ul li::marker {
+            content: "▶";
+            color: #b197fc;
+        }
+    }
+
+}
+@media screen and (max-width: 1200px){
+    .nav-exp-right{
+       .exp-title{
+        .desig{
+            font-size: 20px;
+            font-family: 'CeraBold';
+            color: #001C40;
+        }
+        
+        .company{
+            color: #b197fc;
+            font-family: 'CeraBold';
+            font-size: 20px;
+        }
+       } 
+       .duration {
+        font-size: 15px;
+        font-family: 'CeraMedium';
+        color: #183153;
+    }
+    .exp-content {
+        width: 650px;
+
+        ul {
+            font-size: 15px;
+            width: 340px;
+            margin-right: 20px;
+            font-family: 'CeraRegular';
+        }
+
+        li {
+            font-size: 18px;
+            line-height: 2.5rem;
+            text-align: left;
+            margin-right: 20px;
+            font-family: 'CeraRegular';
+        }
+
+        ul li::marker {
+            content: "▶";
+            color: #b197fc;
+        }
+    }
+    }
+}

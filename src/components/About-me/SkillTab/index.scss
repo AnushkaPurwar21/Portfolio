@@ -1,0 +1,53 @@
+.s-tab {
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    background-color: white;
+    width: 180px;
+    padding: 10px 20px 20px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    .icon {
+        height: 40px;
+        width: 40px;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            height: 30px;
+            width: 30px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+    }
+    .skill-text{
+        font-size: 18px;
+        justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+    }
+}
+
+.s-tab:hover{
+    border: 2px solid #74c0fc;
+    // border-bottom: 6px solid #74c0fc;
+    box-shadow: #74c0fc 0px 7px 1px;
+}
+
+@media screen and (max-width: 1200px){
+    .s-tab{
+        position: initial;
+        height: 30px;
+        width: 120px;
+        .skill-text{
+            font-size: 18px;
+        }
+    }
+}

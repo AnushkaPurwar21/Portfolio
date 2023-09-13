@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "GTAmerica";
+    src: url('../../../assets/fonts/GTAmerica.ttf') format('truetype'); 
+}
+.pr1{
+    display: flex;
+    flex-direction: row;
+    margin-top: 90px;
+    width: 1300px;
+    font-family: 'GTAmerica';
+    img{
+        height: 400px;
+        width: 600px;
+        border: 1px solid white;
+        
+    }
+    .txt{
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+        margin-top: 40px;
+        
+    }
+    .title{
+        font-size: 24px;
+        text-align: right;
+        color: #183153;
+        font-weight: bold;
+    }
+    .content{
+        font-size: 20px;
+        margin-top: 30px;
+        margin-left: 15rem;
+        background-color: rgb(16, 165, 155);
+        text-align: right;
+        width: 600px;
+        padding: 20px;
+        padding-right: 30px;
+        border-radius: 5px;
+    }
+    .skills{
+        display: flex;
+        margin-top: 20px;
+        justify-content: right;
+    }
+    .skills>ul{
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        text-align: right;
+        flex-direction: row;
+        font-size: 15px;
+    }
+    .skills>ul>li{
+        font-size: 15px;
+        gap: 20px;
+        background-color: rgb(25, 113, 113);
+        border-radius: 20px;
+        text-align: center;
+        padding: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        margin-top: 10px;
+        font-size: 25px;
+        gap: 15px;
+    }
+}

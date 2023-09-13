@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'CeraBold';
+    src: url('../../assets/fonts/CeraBold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'CeraMedium';
+    src: url('../../assets/fonts/CeraMedium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'CeraRegular';
+    src: url('../../assets/fonts/CeraRegular.otf') format('opentype');
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    align-items: center;
+    border: none;
+}
+.card>.img-box{
+    height: 250px;
+    width: 250px;
+    background-color: #FFF5F7;
+    justify-content: center;
+    border-radius: 100%;
+    align-items: center;
+    margin-top: 30px;
+}
+.img-box>img{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    top: -4rem;
+    left: -5rem;
+}
+.card>.mainHead{
+    font-size: 30px;
+    font-family: 'CeraBold';
+    align-items: center;
+    text-align: center;
+    margin-top: 36px;
+}
+.card>.content-text{
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'CeraRegular';
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px){
+    .card{
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        .img-box{
+            height: 250px;
+            width: 250px;
+            img{
+                height: 300px;
+                width: 300px; 
+            }
+            
+        }
+        .content-text{
+            line-height: 2.5rem;
+            font-size: 18px;
+            margin-top: 20px;
+            width: 350px;
+            text-align: center;
+        }
+    }
+}

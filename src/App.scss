@@ -1,0 +1,29 @@
+$primary-color: #ffd700;
+
+@import 'animate.css';
+
+@font-face {
+  font-family: 'GTAmerica';
+  src: url('./assets/fonts/GTAmerica.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'CeraMedium';
+  src: url('./assets/fonts/CeraMedium.otf') format('otf');
+}
+
+
+.App{
+  overflow: hidden;
+  width: 100%;
+}
+
+.font-face{
+  font-family: "CeraMedium";
+ }
+
+input, textarea{
+  font-family: 'GTAmerica';
+}
+
+
