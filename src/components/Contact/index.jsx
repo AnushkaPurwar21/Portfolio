@@ -22,38 +22,9 @@ const Contact = () => {
             () => {
                 alert('Message successfully send');
                 window.location.reload(false);
-                // var button = document.querySelector("#send");
-                // var toast = document.querySelector('.toast');
-                // var closeIcon = document.querySelector('.close');
-                // button.addEventListener("click", () => {
-                //     toast.classList.add("active");
-
-                //     setTimeout(() => {
-                //         toast.classList.remove("active");
-                //     }, 3000);
-                //     window.location.reload(false);
-                // });
-
-
-                // closeIcon.addEventListener("click", () => {
-                //     toast.classList.remove("active");
-                // });
             },
             () => {
                 alert('Failed to send the message, please try again!!');
-                // var toastr = document.querySelector('.r-toast');
-                // var closeIconr = document.querySelector('.r-close');
-
-                // button.addEventListener("click", () => {
-                //     toastr.classList.add("active");
-                //     setTimeout(() => {
-                //         toastr.classList.remove("active");
-                //     }, 3000);
-                // });
-
-                // closeIconr.addEventListener("click", () => {
-                //     toastr.classList.remove("active");
-                // });
             }
         );
     }
@@ -69,12 +40,10 @@ const Contact = () => {
             {/* {"<h1>"}  {"</h1>"} */}
                 
                 <div className="c-content">
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat.
+                Hello! Thank you for taking the time to visit my portfolio. 
+                If you have any questions or would like to discuss potential opportunities, 
+                please feel free to contact me. I am always open to new 
+                connections and collaborations, and I look forward to hearing from you soon.
                 </div>
                
                 <div className="toast">

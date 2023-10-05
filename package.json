@@ -1,5 +1,5 @@
 {
-  "homepage": "https://BeginnerCoder21.github.io/MyPortfolio",
+  "homepage": "https://github.com/AnushkaPurwar21/Portfolio",
   "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -14,6 +14,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
+    "firebase": "^10.4.0",
     "framer-motion": "^7.2.1",
     "gsap-trial": "^3.11.0",
     "loaders.css": "^0.1.2",
@@ -54,6 +55,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^6.0.0"
   }
 }

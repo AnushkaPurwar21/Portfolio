@@ -27,9 +27,9 @@ const Home = () => {
                     <span>Anushka</span>
                     {' </h1>'}
                     <br />
-                    Frontend Developer
+                    Data Analyst
                 </h1>
-                <h2>Frontend Developer | UI/UX Designer | Android Developer</h2>
+                <h2>Data Analyst | Frontend Developer | UI/UX Designer</h2>
                 <Link to="/contact" className="flat-button">
                     <p>Contact Me</p>
                 </Link>
@@ -49,13 +49,13 @@ const Home = () => {
                     <div className="h-icon">
                         <SiAndroid color='#001C40' />
                     </div>
-                    <div className="h-text">Android</div>
+                    <div className="h-text">UI Designer</div>
                 </div>
                 <div className="tag3">
                     <div className="h-icon">
                         <BsVectorPen color='#001C40' />
                     </div>
-                    <div className="h-text">UI/UX Designer</div>
+                    <div className="h-text">Data Analyst</div>
                 </div>
                 <div className="half-circle">
                 </div>

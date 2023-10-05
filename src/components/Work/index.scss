@@ -67,17 +67,16 @@
 }
 
 .prbox {
-    margin: 60px 15rem 30px 15rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    margin: 60px 15rem 30px 9rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 100px));
     gap: 30px;
 }
 .main>.con-socials {
     margin-top: 100px;
     margin-left: 220px;
 }
+
 
 @media screen and (max-width: 1200px) {
     .main {
@@ -135,3 +134,4 @@
         }
     }
 }
+

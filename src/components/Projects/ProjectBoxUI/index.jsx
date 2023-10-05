@@ -4,10 +4,9 @@ import { FiFolder } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { AiFillBehanceCircle } from "react-icons/ai";
 
-
-const ProjectBoxUI = ({imgL,link1,title,content,skill1}) => {
+const ProjectBoxUI = ({ imgL, link1, title, content, skill1 }) => {
     return (
-        <div className="boxPu" style={{backgroundColor: '#FFF5F7'}}>
+        <div className="boxPu" style={{ backgroundColor: '#FFF5F7' }}>
             <div className="img-head">
                 <img src={imgL} alt="image" />
             </div>
@@ -22,10 +21,11 @@ const ProjectBoxUI = ({imgL,link1,title,content,skill1}) => {
                     <li>{skill1}</li>
                 </ul>
             </div>
-            <div className="icon">
-            <a href={link1} target='_blank'><HiOutlineExternalLink color="#183153" /></a>
-            </div>
-
+            {link1 && (
+                <div className="icon">
+                    <a href={link1} target='_blank'><HiOutlineExternalLink color="#183153" /></a>
+                </div>
+            )}
         </div>
     );
 }

@@ -1,6 +1,8 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState,useEffect } from 'react';
 import './index.scss';
 import 'animate.css';
+import firestore from '../../firebaseConfig';
+import { doc, collection, query, where, onSnapshot, getDocs } from "firebase/firestore";
 import Card from "../Card";
 import Avocado from '../../assets/images/Avocadro.svg';
 import Experience from './Experience';
@@ -16,65 +18,37 @@ import UI from '../../assets/images/UI.svg';
 import ContactBottom from '../ContactBottom';
 
 const AboutMe = () => {
-    const [expTitle, setExpTitle] = useState('Executive Mem.');
-    const [company, setCompany] = useState('Placement Cell');
-    const [duration, setDuration] = useState('August 2021 - April 2022');
-    const [lineO, setLineO] = useState('Responsible for contacting and inviting companies for organizing campus placement and internship drives ');
-    const [lineT, setLineT] = useState('Created informative content and posts for social media handles (LinkedIn and Instagram) of the cell');
-    const [lineTh, setLineTh] = useState('Worked in a team');
-    const [link, setLink] = useState('');
+    const [experience, setExperience] = useState([]);
+    const [selectedCompany, setSelectedCompany] = useState(null);
 
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const experienceCollectionRef = collection(firestore, 'experience');
+            const snapshot = await getDocs(experienceCollectionRef);
 
-    const exp1 = () => {
-        console.log("Inside exp1");
-        setExpTitle('Executive Mem.');
-        setCompany('Placement Cell');
-        setDuration('August 2021 - April 2022');
-        setLineO('Responsible for contacting and inviting companies for organizing campus placement and internship drives ');
-        setLineT("Created informative content and posts for social media handles (LinkedIn and Instagram) of the cell");
-        setLineTh("Worked in a team");
-        setLink("");
-    }
-    const exp2 = () => {
-        console.log("Inside exp2");
-        setExpTitle('Peer Mentor');
-        setCompany('MSCW');
-        setDuration('February 2022 and August 2021');
-        setLineO("Mentored students on two different topics: Python programming and Animation using Blender 3D.");
-        setLineT("Both programmes were 30 hours long, beginner-friendly course");
-        setLineTh("Taught the mentees with hands-on sessions including projects and assignments.");
-        setLink("");
-    }
-    const exp3 = () => {
-        console.log("Inside exp3");
-        setExpTitle('Web Development intern');
-        setCompany('HSG');
-        setDuration('July 2021 - September 2021');
-        setLineO("Worked in a team and analyzed their website made using WIX and assessed them how it can be more better.");
-        setLineT("Designed the UI's for their website so that it become more user friendly");
-        setLineTh("Guided them how can we increase their reach and worked on increasing their site Backlinks and Domain Authority");
-        setLink("");
-    }
-    const exp4 = () => {
-        console.log("Inside exp3");
-        setExpTitle('Assoc. Graphic designer');
-        setCompany('LQF');
-        setDuration('May 2021 - July 2021');
-        setLineO("Designed posters, newsletters, Presentations");
-        setLineT("Illustrated their toolkit.");
-        setLineTh("Designed the posts for their social media handles ");
-        setLink("");
-    }
-    const exp5 = () => {
-        console.log("Inside exp3");
-        setExpTitle('LexQuest Foundation');
-        setCompany('Efg');
-        setDuration('May 2022 - Jun 2022');
-        setLineO("Heldjfkfk  mff k nkf  f fk fkf lo");
-        setLineT("jjc nnf n kfn kn  ,nfknfkfkf mfsdjsvd");
-        setLineTh("dvdvdvj f nf nfknfknfknfkfk");
-        setLink("");
-    }
+            const data = snapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            }));
+
+            console.log('Fetched data:', data);
+            setExperience(data);
+            setSelectedCompany(data[data.length - 1]);
+            } catch (error) {
+            console.error('Error fetching experience data:', error);
+            }
+        };
+      
+        fetchData();
+      }, []);
+      
+
+    const handleCompanyClick = (exp) => {
+        console.log('Clicked company:', exp.company);
+        setSelectedCompany(exp);
+    };
+    
     return (
         <div className="about">
             <div className="about-head">
@@ -82,16 +56,16 @@ const AboutMe = () => {
             </div>
 
             <div className="content">
-                <Card img={About1} heading="Coder" 
+                <Card img={About1} heading="Data Analyst" 
                 content="I like to code things from scratch and 
                 like to bring my ideas to the browser world." />
-                <Card img={UI} heading="UI/UX Designer" 
-                content="Everything is designed. Few things are designed well ;)
-                I make simple, clean design with some uniqueness." />
-                <Card img={About2} heading="Animator" 
+                <Card img={About2} heading="Frontend Developer" 
                 content="Animating my own original creations 
                 makes me feel good. Making 3D characters and icons 
                 is something I enjoy doing." />
+                <Card img={UI} heading="UI/UX Designer" 
+                content="Everything is designed. Few things are designed well ;)
+                I make simple, clean design with some uniqueness." />
             </div>
             <div className="m-content">
                 <div className="c-left">
@@ -100,21 +74,27 @@ const AboutMe = () => {
                     <div className="exp-flex">
                         <div className="nav-exp-left">
                             <ul>
-                                <li onClick={exp1}>PRAYAS- Placement Cell of MSCW </li>
-                                <li onClick={exp2}>MSCW</li>
-                                <li onClick={exp3}>Hello Study Gloabl </li>
-                                <li onClick={exp4}>LexQuest Foundation</li>
+                            {experience
+                                .slice()
+                                .sort((a, b) => b.id - a.id)  // Sort in descending order based on id
+                                .slice(0, 4)  // Get the top 4 items
+                                .map(exp => (
+                                <li key={exp.id} onClick={() => handleCompanyClick(exp)}>
+                                    {exp.title}
+                                </li>
+                            ))}
                             </ul>
                         </div>
-                        <Experience expT={expTitle}
-                            comp={company}
-                            duration={duration}
-                            lineO={lineO}
-                            lineT={lineT}
-                            lineTh={lineTh}
-                            link={link}
-                        />
-                        {/* <img src="" alt="" /> */}
+                        {selectedCompany && (
+                            <Experience
+                            expT={selectedCompany.title}
+                            comp={selectedCompany.company}
+                            duration={selectedCompany.duration}
+                            lineO={selectedCompany.lineo}
+                            lineT={selectedCompany.linet}
+                            lineTh={selectedCompany.lineth}
+                            />
+                        )}
                     </div>
                 </div>
                 <div className="c-right">
@@ -145,35 +125,6 @@ const AboutMe = () => {
                         <SkillTab icon={<SiBlender />} title={"Blender"} />
 
                         <br /><br />
-                        {/* <ul className="back">
-                                {
-                                    backSkills.map((oldSkills, index) => {
-                                        return (
-                                            <li key={index}>{oldSkills}</li>
-                                        );
-                                    })
-                                }
-
-                            </ul>
-                            <ul className="tech">
-                                {
-                                    techSkills.map((oldTechSkills, index) => {
-                                        return (
-                                            <li key={index}>{oldTechSkills}</li>
-                                        );
-                                    })
-                                }
-                            </ul>
-
-                            <ul className="front">
-                                {
-                                    frontSkills.map((oldFrontSkills, index) => {
-                                        return (
-                                            <li key={index}>{oldFrontSkills}</li>
-                                        );
-                                    })
-                                }
-                            </ul> */}
                     </div>
                            
                 </div>

@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Layout />
         <Routes>
-          <Route path="/Portfolio-React" element={<Home />} exact />
+          <Route path="/" element={<Home />} exact />
           <Route path="/about" exact element={<AboutMe/>}  />
           <Route path="/work" element={<Work />} exact />
           <Route path="/contact" element={<Contact />} exact />
