@@ -28,9 +28,3 @@ const Experience = ({expT,comp,duration,lineO,lineT,lineTh,link}) => {
 
 
 export default Experience;
-
-{/* <Box title="Associate Graphic Designer" comp="LexQuest Foundation" duration="Aug'22 - Sep'22" />
-                    <Box title="Associate Graphic Designer" comp="LexQuest Foundation" duration="Aug'22 - Sep'22" />
-                    <Box title="Associate Graphic Designer" comp="LexQuest Foundation" duration="Aug'22 - Sep'22" />
-                    <Box title="Associate Graphic Designer" comp="LexQuest Foundation" duration="Aug'22 - Sep'22" />
-                 */}

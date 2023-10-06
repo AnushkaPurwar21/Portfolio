@@ -1,10 +1,9 @@
-import React, { useRef, useState,useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import './index.scss';
 import 'animate.css';
 import firestore from '../../firebaseConfig';
-import { doc, collection, query, where, onSnapshot, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import Card from "../Card";
-import Avocado from '../../assets/images/Avocadro.svg';
 import Experience from './Experience';
 import { SiCplusplus, SiPython, SiJava, SiJavascript, SiAdobeillustrator } from "react-icons/si";
 import { SiReact, SiHtml5, SiCss3, SiFlutter, SiAdobexd } from "react-icons/si";
@@ -13,7 +12,7 @@ import { FaSass } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 import SkillTab from './SkillTab/index';
 import About1 from '../../assets/images/About1.svg';
-import About2 from '../../assets/images/Animator.svg';
+import frontend from '../../assets/images/frontend.svg';
 import UI from '../../assets/images/UI.svg';
 import ContactBottom from '../ContactBottom';
 
@@ -59,7 +58,7 @@ const AboutMe = () => {
                 <Card img={About1} heading="Data Analyst" 
                 content="Passionate about unraveling data stories.
                 Shaping insights from raw data to illuminate the analytics realm." />
-                <Card img={About2} heading="Frontend Developer" 
+                <Card img={frontend} heading="Frontend Developer" 
                 content="Infusing creativity into code and translating my concepts into captivating 
                 web experiences, crafted from a fresh perspective, driven by innovation." />
                 <Card img={UI} heading="UI/UX Designer" 
@@ -75,8 +74,8 @@ const AboutMe = () => {
                             <ul>
                             {experience
                                 .slice()
-                                .sort((a, b) => b.id - a.id)  // Sort in descending order based on id
-                                .slice(0, 4)  // Get the top 4 items
+                                .sort((a, b) => b.id - a.id)
+                                .slice(0, 4)  
                                 .map(exp => (
                                 <li key={exp.id} onClick={() => handleCompanyClick(exp)}>
                                     {exp.title}
