@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/AnushkaPurwar21/portfolio/static/css/main.d728436b.css",
+    "main.js": "/AnushkaPurwar21/portfolio/static/js/main.2abd3154.js",
+    "static/js/787.a2cb61a6.chunk.js": "/AnushkaPurwar21/portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/girl6.svg": "/AnushkaPurwar21/portfolio/static/media/girl6.bdeb6bffdca1b32403cb3f1434ec1f11.svg",
+    "static/media/UI.svg": "/AnushkaPurwar21/portfolio/static/media/UI.8a5f119ad975fe39e58a144e22b2ff05.svg",
+    "static/media/Animator.svg": "/AnushkaPurwar21/portfolio/static/media/Animator.1d838f7ddd33e12f817343b2588ff417.svg",
+    "static/media/CeraBold.otf": "/AnushkaPurwar21/portfolio/static/media/CeraBold.20247302b83f7510d60b.otf",
+    "static/media/CeraMedium.otf": "/AnushkaPurwar21/portfolio/static/media/CeraMedium.8e935ff5f60a3fe9911d.otf",
+    "static/media/CeraBlack.otf": "/AnushkaPurwar21/portfolio/static/media/CeraBlack.2ac0d48f85dd1796de54.otf",
+    "static/media/CeraRegular.otf": "/AnushkaPurwar21/portfolio/static/media/CeraRegular.6eda5276b71ed83a1884.otf",
+    "static/media/GTAmerica.ttf": "/AnushkaPurwar21/portfolio/static/media/GTAmerica.4d465b839cabdd3b2926.ttf",
+    "static/media/Avocadro.svg": "/AnushkaPurwar21/portfolio/static/media/Avocadro.56a56778687f22525d30ab34e9c9c9c6.svg",
+    "static/media/About1.svg": "/AnushkaPurwar21/portfolio/static/media/About1.9f4d93fb8a61d4d6f051670b25f17ba3.svg",
+    "static/media/logo.svg": "/AnushkaPurwar21/portfolio/static/media/logo.179d85e17d2f0012403128ffd21d8bf4.svg",
+    "index.html": "/AnushkaPurwar21/portfolio/index.html",
+    "main.d728436b.css.map": "/AnushkaPurwar21/portfolio/static/css/main.d728436b.css.map",
+    "main.2abd3154.js.map": "/AnushkaPurwar21/portfolio/static/js/main.2abd3154.js.map",
+    "787.a2cb61a6.chunk.js.map": "/AnushkaPurwar21/portfolio/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d728436b.css",
+    "static/js/main.2abd3154.js"
+  ]
+}
