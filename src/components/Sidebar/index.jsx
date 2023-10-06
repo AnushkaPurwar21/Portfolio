@@ -18,7 +18,7 @@ const Sidebar =() =>{
         <div className="logo">
         </div>
             <nav className={showNav ? "mobile-show" : ""}> 
-                <NavLink exact="true" activeclassname="active" to="/home" className="home-link">
+                <NavLink exact="true" activeclassname="active" to="/portfolio" className="home-link">
                     <FontAwesomeIcon icon={faHouse} color="#B4B7C1" />
                 </NavLink>
                 
