@@ -8,7 +8,7 @@ const Experience = ({expT,comp,duration,lineO,lineT,lineTh,link}) => {
             <div className="exp-title">
                 <div className='desig'> {expT} </div>&nbsp;<div className='company'>@{comp}</div>
                 <div className="exp-icon">
-                    <a href={link}><HiOutlineExternalLink color='001C40' /></a>
+                    {link && <a href={link}><HiOutlineExternalLink color='001C40' /></a>}
                 </div>
             </div>
             <div className="duration">

@@ -57,15 +57,14 @@ const AboutMe = () => {
 
             <div className="content">
                 <Card img={About1} heading="Data Analyst" 
-                content="I like to code things from scratch and 
-                like to bring my ideas to the browser world." />
+                content="Passionate about unraveling data stories.
+                Shaping insights from raw data to illuminate the analytics realm." />
                 <Card img={About2} heading="Frontend Developer" 
-                content="Animating my own original creations 
-                makes me feel good. Making 3D characters and icons 
-                is something I enjoy doing." />
+                content="Infusing creativity into code and translating my concepts into captivating 
+                web experiences, crafted from a fresh perspective, driven by innovation." />
                 <Card img={UI} heading="UI/UX Designer" 
-                content="Everything is designed. Few things are designed well ;)
-                I make simple, clean design with some uniqueness." />
+                content="Crafting pixels with purpose, embracing simplicity, I believe every 
+                detail matters. Let's create designs that speak, not just look." />
             </div>
             <div className="m-content">
                 <div className="c-left">
@@ -93,6 +92,7 @@ const AboutMe = () => {
                             lineO={selectedCompany.lineo}
                             lineT={selectedCompany.linet}
                             lineTh={selectedCompany.lineth}
+                            link={selectedCompany.link}
                             />
                         )}
                     </div>

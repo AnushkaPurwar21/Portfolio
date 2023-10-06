@@ -16,12 +16,9 @@ const Sidebar =() =>{
     return(
         <div className="nav-bar">
         <div className="logo">
-        {/* <Link to='/'>
-                <img src={logo} alt="logo" />
-            </Link> */}
         </div>
             <nav className={showNav ? "mobile-show" : ""}> 
-                <NavLink exact="true" activeclassname="active" to="/" className="home-link">
+                <NavLink exact="true" activeclassname="active" to="/home" className="home-link">
                     <FontAwesomeIcon icon={faHouse} color="#B4B7C1" />
                 </NavLink>
                 
